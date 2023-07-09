@@ -1,0 +1,16 @@
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\bin\Debug\Q9.exe.config
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\bin\Debug\Q9.exe
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\bin\Debug\Q9.pdb
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\obj\Debug\Q9.csproj.AssemblyReference.cache
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\obj\Debug\Q9.csproj.SuggestedBindingRedirects.cache
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\obj\Debug\Q9.csproj.CoreCompileInputs.cache
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\obj\Debug\Q9.exe
+C:\Users\shash\OneDrive\Desktop\Q9\Q9\obj\Debug\Q9.pdb
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\bin\Debug\Q9.exe.config
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\bin\Debug\Q9.exe
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\bin\Debug\Q9.pdb
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\obj\Debug\Q9.csproj.AssemblyReference.cache
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\obj\Debug\Q9.csproj.SuggestedBindingRedirects.cache
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\obj\Debug\Q9.csproj.CoreCompileInputs.cache
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\obj\Debug\Q9.exe
+C:\Users\shash\OneDrive\Desktop\sports\Q9\Q9\obj\Debug\Q9.pdb

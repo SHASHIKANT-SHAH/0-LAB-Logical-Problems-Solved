@@ -1,0 +1,8 @@
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\bin\Debug\Q8.exe.config
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\bin\Debug\Q8.exe
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\bin\Debug\Q8.pdb
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\obj\Debug\Q8.csproj.AssemblyReference.cache
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\obj\Debug\Q8.csproj.SuggestedBindingRedirects.cache
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\obj\Debug\Q8.csproj.CoreCompileInputs.cache
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\obj\Debug\Q8.exe
+C:\Users\shash\OneDrive\Desktop\Q8\Q8\obj\Debug\Q8.pdb
