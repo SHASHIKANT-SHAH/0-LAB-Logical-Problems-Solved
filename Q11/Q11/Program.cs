@@ -16,7 +16,7 @@ namespace Q11
         public string NameFull { get; set; }
 
         [JsonPropertyName("IsCaptain")]
-        public Boolean IsCaptain { get; set; }
+        public bool IsCaptain { get; set; }
 
     }
     public class Team

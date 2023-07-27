@@ -39,7 +39,19 @@ namespace Q12
             var lineups= JsonSerializer.Deserialize<IEnumerable<Lineups>>(jsonLineups);
             var bowlingStats = JsonSerializer.Deserialize<IEnumerable<BowlingStats>>(jsonbowlingStats);
 
-            var result = from lineup in lineups
+            //inner Join
+            var result = (from lineup in lineups
+                          join stats in bowlingStats
+                          on lineup.PlayerId equals stats.PlayerId
+                          orderby stats.Wickets descending
+                          select new
+                          {
+                              PlayerName = lineup.PlayerName,
+                              Wickets = stats.Wickets,
+                          }).ToList();
+
+            //left Outer Join
+            var result2 = (from lineup in lineups
                          join stats in bowlingStats
                          on lineup.PlayerId equals stats.PlayerId into statsGroup
                          from stats in statsGroup.DefaultIfEmpty()
@@ -47,10 +59,65 @@ namespace Q12
                          {
                              PlayerName = lineup.PlayerName,
                              Wickets = (stats == null ? 0 : stats.Wickets)
-                         };
+                         }).ToList();
+
+            //Group Join  and we can also  Applying Filters at grouping level
+
+            var result3 = (from lineup in lineups
+                           join stats in bowlingStats
+                           on lineup.PlayerId equals stats.PlayerId into statsGroup
+                           select new
+                           {
+                               PlayerName = lineup.PlayerName,
+                               g = statsGroup
+                           }).ToList()
+                           .Select(item => new
+                           {
+                               PlayerName = item.PlayerName,
+                               g = item.g.Where(stat => stat.Wickets > 1)
+                           }).ToList();
+
+            var result4  = (from lineup in lineups
+                            join stats in bowlingStats
+                            on lineup.PlayerId equals stats.PlayerId into statsGroup
+                            select new
+                            {
+                                PlayerName = lineup.PlayerName,
+                                g = statsGroup.Select(stat => new BowlingStats
+                                {
+                                    PlayerId = stat.PlayerId,
+                                    Wickets = (stat.Wickets == null ? 0 : stat.Wickets) // Update wicket value to 0 if it's null
+                                })
+                            }).ToList();
+
+
+
             foreach (var item in result)
             {
                 Console.WriteLine($"Player Name: {item.PlayerName} \t Wickets: {item.Wickets}");
+            }
+            Console.WriteLine("--------------");
+            foreach (var item in result2)
+            {
+                Console.WriteLine($"Player Name: {item.PlayerName} \t Wickets: {item.Wickets}");
+            }
+            Console.WriteLine("--------------");
+            foreach (var item in result3)
+            {
+                Console.WriteLine($"Player Name: {item.PlayerName} ");
+                foreach(var group in item.g)
+                {
+                    Console.WriteLine(group.Wickets);
+                }
+            }
+            Console.WriteLine("--------------");
+            foreach (var item in result4)
+            {
+                Console.WriteLine($"Player Name: {item.PlayerName}" );
+                foreach (var group in item.g)
+                {
+                    Console.WriteLine(group.Wickets);
+                }
             }
             Console.ReadLine();
         }
